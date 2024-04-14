@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="/css/style.css" />
+
+		<title>Frontend Mentor | NFT preview card component</title>
+	</head>
+	<body>
+		<main class="main">
+			<section class="card-container">
+				<div class="card">
+					<div class="card__img-container is-image-active">
+						<img
+							src="images/image-equilibrium.jpg"
+							alt="Equilibrium Art"
+							class="card__img"
+						/>
+					</div>
+
+					<div class="card__content-container">
+						<div class="card__content">
+							<h1 class="card__heading is-text-active">Equilibrium #3429</h1>
+							<p class="card__description">
+								Our Equilibrium collection promotes balance and calm.
+							</p>
+						</div>
+
+						<div class="card__price-info">
+							<div class="price">
+								<img
+									src="images/icon-ethereum.svg"
+									alt="Ethereum Icon"
+									class="price__icon"
+								/>
+								<p class="price__value">0.041 ETH</p>
+							</div>
+							<div class="time-remaining">
+								<img
+									class="time-remaining__icon"
+									src="images/icon-clock.svg"
+									alt="Clock Icon"
+								/>
+								<p class="time-remaining__value">3 days left</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="card__author-container">
+						<div class="card__author-divider"></div>
+						<div class="author">
+							<img
+								src="images/image-avatar.png"
+								alt="Author Image"
+								class="author__img"
+							/>
+							<p class="author__created-by">
+								Creation of
+								<a class="author__name is-text-active"
+									><span>Jules Wyvern</span></a
+								>
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
