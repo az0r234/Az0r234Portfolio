@@ -1,0 +1,160 @@
+:root {
+	--primary-font: 'Kumbh Sans', sans-serif;
+	--dark-cyan: hsl(185, 75%, 39%);
+	--very-dark-desaturated-blue: hsl(229, 23%, 23%);
+	--dark-grayish-blue: hsl(227, 10%, 46%);
+	--dark-grey: hsl(0, 0%, 59%);
+	--white: #fff;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: var(--primary-font);
+	font-weight: 400;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+/* SETTING THE BACKGROUND */
+.main-background {
+	background-color: var(--dark-cyan);
+	background-image: url('/images/bg-pattern-top.svg'),
+		url('/images/bg-pattern-bottom.svg');
+	background-repeat: no-repeat, no-repeat;
+	background-size: contain, contain;
+	background-position: top -50vh left -15vh, bottom -50vh right -15vh;
+}
+
+/* CARD COMPONENT */
+.card {
+	display: flex;
+	flex-direction: column;
+	background: var(--white);
+	width: 35.3rem;
+	height: 37rem;
+	border-radius: 15px;
+	box-shadow: 0px 25px 50px 0px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	gap: 0;
+	position: relative;
+}
+
+/* Card Banner Section */
+.card__banner-image {
+	width: 100%;
+	display: block;
+}
+
+/* Card Profile Section */
+.card__profile {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	margin-top: 7.5rem;
+	align-items: center;
+}
+
+.card__profile-avatar {
+	height: 10.5rem;
+	width: 10.5rem;
+	position: absolute;
+	top: 25%;
+	left: calc(50% - 5.25rem);
+	border-radius: 50%;
+	border: #fff solid 0.5rem;
+}
+
+/* CARD BIO */
+.card__bio {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.6rem;
+}
+
+.card__bio-name {
+	font-size: 1.8rem;
+	font-weight: 700;
+	color: var(--very-dark-desaturated-blue);
+}
+
+.card__bio-age {
+	margin-left: 1rem;
+	font-size: 1.8rem;
+	display: inline-block;
+	font-weight: 400;
+	color: var(--dark-grey);
+}
+
+.card__bio-location {
+	font-size: 1.5rem;
+	color: var(--dark-grey);
+}
+
+/* Card Metrics Section */
+.card__metrics-section {
+	list-style: none;
+	display: flex;
+	margin-top: 3rem;
+	width: 100%;
+	justify-content: space-evenly;
+	border-top: 0.1rem solid color-mix(in srgb, var(--dark-grey) 30%, transparent);
+	padding: 1.6rem 0;
+}
+
+.card__metrics-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.card__metrics-value {
+	font-size: 1.8rem;
+	font-weight: 700;
+	color: var(--very-dark-desaturated-blue);
+}
+
+.card__metrics-label {
+	font-size: 1.1rem;
+	letter-spacing: 0.15rem;
+	font-weight: 400;
+	color: var(--dark-grey);
+}
+
+@media (max-width: 75rem) {
+	.main-background {
+		background-position: top -50vh left -35vh, bottom -50vh right -35vh;
+	}
+}
+
+@media (max-width: 35em) {
+	html {
+		font-size: 55.8%;
+	}
+
+	.main-background {
+		background-position: top -35vh left -35vh, bottom -35vh right -35vh;
+	}
+}
+
+@media (max-width: 25em) {
+	.main-background {
+		background-position: top -15vh left -30vh, bottom -20vh right -30vh;
+	}
+}

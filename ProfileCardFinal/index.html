@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,116&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="/styles/styles.css" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/images/favicon-32x32.png"
+		/>
+		<title>Profile card component</title>
+	</head>
+	<body>
+		<main class="main-background">
+			<!-- Card Component -->
+			<section class="card">
+				<!-- Card Banner -->
+				<div class="card__banner-section">
+					<img
+						class="card__banner-image"
+						src="/images/bg-pattern-card.svg"
+						alt="Card Banner Picture"
+					/>
+				</div>
+				<section class="card__profile">
+					<!-- Card Avatar Image -->
+					<img
+						src="/images/image-victor.jpg"
+						alt="Image of Victor"
+						class="card__profile-avatar"
+					/>
+
+					<!-- Card Bio Section -->
+					<section class="card__bio">
+						<h2 class="card__bio-name">
+							Victor Crest<span class="card__bio-age">26</span>
+						</h2>
+						<p class="card__bio-location">London</p>
+					</section>
+
+					<!-- Card Metrics Component -->
+					<ul class="card__metrics-section">
+						<li class="card__metrics-item">
+							<h2 class="card__metrics-value">80K</h2>
+							<p class="card__metrics-label">Followers</p>
+						</li>
+						<li class="card__metrics-item">
+							<h2 class="card__metrics-value">803K</h2>
+							<p class="card__metrics-label">Likes</p>
+						</li>
+						<li class="card__metrics-item">
+							<h2 class="card__metrics-value">1.4K</h2>
+							<p class="card__metrics-label">Photos</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</main>
+	</body>
+</html>
