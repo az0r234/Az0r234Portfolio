@@ -1,0 +1,72 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: 'Outfit', sans-serif;
+	font-weight: 400;
+}
+
+.qr-code-container {
+	height: 100vh;
+	background-color: #d5e1ef;
+	position: relative;
+}
+
+.qr-code-card {
+	background-color: #ffffff;
+	width: 32rem;
+	height: 49.7rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 2rem;
+	box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
+
+	display: flex;
+	flex-direction: column;
+	gap: 2.4rem;
+	padding: 1.6rem;
+}
+
+.qr-code-card__img-wrapper {
+	width: 100%;
+	overflow: hidden;
+	border-radius: 1rem;
+}
+
+.qr-code-card__img {
+	max-width: 100%;
+}
+
+.qr-code-card__content-wrapper {
+	width: 100%;
+	padding: 0 1.6rem;
+
+	display: flex;
+	flex-direction: column;
+	gap: 1.6rem;
+}
+
+.qr-code-card__title {
+	color: #1f314f;
+	text-align: center;
+	font-weight: 700;
+	font-size: 2.2rem;
+}
+
+.qr-code-card__subTitle {
+	color: #7d889e;
+	font-size: 1.5rem;
+	font-weight: 400;
+	letter-spacing: 0.188px;
+	text-align: center;
+}
