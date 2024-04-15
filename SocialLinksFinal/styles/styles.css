@@ -1,0 +1,124 @@
+:root {
+	--primary-green: hsl(75, 94%, 57%);
+	--neutral-white: hsl(0, 0%, 100%);
+	--neutral-grey: hsl(0, 0%, 20%);
+	--neutral-dark-grey: hsl(0, 0%, 12%);
+	--neutral-off-black: hsl(0, 0%, 8%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	font-size: 1.4rem;
+	font-weight: 400;
+}
+
+.heading {
+	font-size: 2rem;
+}
+
+.sub-heading--normal {
+	font-size: 1.4rem;
+}
+
+.sub-heading--small {
+	font-size: 1.2rem;
+}
+
+.main {
+	height: 100vh;
+	background-color: var(--neutral-off-black);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Social Card */
+.social-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2.5rem;
+	padding: 3.5rem;
+	background-color: var(--neutral-dark-grey);
+	border-radius: 1.2rem;
+	width: 38rem;
+}
+
+/* Social Card User Image */
+.social-card__user-image {
+	width: 9rem;
+	border-radius: 50%;
+}
+
+/* User Info */
+.social-card__user-info {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+	align-items: center;
+}
+
+.social-card__user-name {
+	font-weight: 600;
+	color: var(--neutral-white);
+}
+
+.social-card__user-location {
+	font-weight: 600;
+	color: var(--primary-green);
+}
+
+/* User Quote */
+.social-card__user-quote {
+	color: var(--neutral-white);
+}
+
+/* User Links */
+.social-card__user-links {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 1.6rem;
+	width: 100%;
+}
+
+.social-card__link-item {
+	background-color: var(--neutral-grey);
+	color: var(--neutral-white);
+	padding: 1.6rem;
+	text-align: center;
+	border-radius: 1rem;
+	letter-spacing: 0.6px;
+	font-weight: 700;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+
+.social-card__link-item:link,
+.social-card__link-item:visited {
+	background-color: var(--neutral-grey);
+	color: var(--neutral-white);
+}
+
+.social-card__link-item:hover,
+.social-card__link-item:active {
+	color: var(--neutral-dark-grey);
+	background-color: var(--primary-green);
+}
+
+@media (max-width: 25em) {
+	.social-card {
+		width: 32.5rem;
+		padding: 2.5rem;
+	}
+}
