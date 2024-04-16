@@ -7,13 +7,13 @@ for (let i = 0; i < projectItems.length; i++) {
 		let overlay = projectItem.getElementsByClassName(
 			'projects__list-overlay'
 		)[0];
-		overlay.classList.toggle('projects__list-overlay--active');
+		overlay.classList.add('projects__list-overlay--active');
 	});
 
 	projectItem.addEventListener('mouseleave', () => {
 		let overlay = projectItem.getElementsByClassName(
 			'projects__list-overlay'
 		)[0];
-		overlay.classList.toggle('projects__list-overlay--active');
+		overlay.classList.remove('projects__list-overlay--active');
 	});
 }
