@@ -122,8 +122,15 @@ body {
 }
 
 /* ADD TO CART */
-.product__add-to-cart {
+.product__add-to-cart-btn {
 	background-color: var(--primary-dark-cyan);
+	transition: background-color 0.5s ease-in;
+}
+
+.product__add-to-cart-btn:hover,
+.product__add-to-cart-btn:active {
+	background-color: #1a4032;
+	cursor: pointer;
 }
 
 /* Button Component */
