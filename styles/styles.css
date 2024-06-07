@@ -25,15 +25,15 @@ body {
 
 h1 {
 	font-weight: 700;
+	text-align: center;
 }
 
 .projects {
 	display: flex;
 	flex-direction: column;
-	gap: 1.6rem;
-	padding: clamp(0.8rem, 1.6rem, 1.6rem);
-	padding: 1.6rem;
-	justify-content: center;
+	gap: 2rem;
+	align-content: center;
+	padding: 1.6rem 0;
 }
 
 .projects__title {
@@ -42,8 +42,9 @@ h1 {
 
 .projects__list {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
-	gap: 1.6rem;
+	grid-template-columns: repeat(auto-fit, minmax(35rem, max-content));
+	justify-content: center;
+	gap: 1.4rem;
 }
 
 .projects__list-item {
