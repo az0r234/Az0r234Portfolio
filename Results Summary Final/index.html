@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
+		<title>Results summary component</title>
+	</head>
+	<body>
+		<main class="main">
+			<div class="card">
+				<div class="result">
+					<h1 class="result__title">Your Result</h1>
+					<div class="result__score-container">
+						<h1 class="result__score">76</h1>
+						<p class="result__out-of">of 100</p>
+					</div>
+					<div class="result__detail">
+						<h1 class="result__detail-title">Great</h1>
+						<p class="result__detail-text">
+							Your performance exceed 65% of the people conducting the test
+							here!
+						</p>
+					</div>
+				</div>
+				<div class="summary">
+					<h1 class="summary__title">Summary</h1>
+					<ul class="summary__list">
+						<li class="summary__list-item summary__list-item--reaction">
+							<div class="summary__type">
+								<img
+									src="/assets/images/icon-reaction.svg"
+									alt="Reaction Icon"
+									class="summary__icon"
+								/>
+								<p class="summary__type-title">Reaction</p>
+							</div>
+							<p class="summary__score">80 <span>/ 100</span></p>
+						</li>
+						<li class="summary__list-item summary__list-item--memory">
+							<div class="summary__type">
+								<img
+									src="/assets/images/icon-memory.svg"
+									alt="Memory Icon"
+									class="summary__icon"
+								/>
+								<p class="summary__type-title">Memory</p>
+							</div>
+							<p class="summary__score">92 <span>/ 100</span></p>
+						</li>
+						<li class="summary__list-item summary__list-item--verbal">
+							<div class="summary__type">
+								<img
+									src="/assets/images/icon-verbal.svg"
+									alt="Verbal Icon"
+									class="summary__icon"
+								/>
+								<p class="summary__type-title">Verbal</p>
+							</div>
+							<p class="summary__score">61 <span>/ 100</span></p>
+						</li>
+						<li class="summary__list-item summary__list-item--visual">
+							<div class="summary__type">
+								<img
+									src="/assets/images/icon-visual.svg"
+									alt="Visual Icon"
+									class="summary__icon"
+								/>
+								<p class="summary__type-title">Visual</p>
+							</div>
+							<p class="summary__score">73 <span>/ 100</span></p>
+						</li>
+					</ul>
+					<a href="#" class="btn btn--blue">Continue</a>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

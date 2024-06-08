@@ -1,0 +1,210 @@
+/* Gradient For A Background */
+/* Gradient for Circle */
+/* NEUTRAL COLORS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 50em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.main {
+  background-color: hsl(221, 100%, 96%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(36.8rem, min-content));
+  justify-content: center;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0px 3rem 6rem rgba(61, 108, 236, 0.15);
+  border-radius: 3.2rem;
+  flex: 0 1 73.6rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .card {
+    display: inline-block;
+    align-self: stretch;
+    border-radius: 0;
+  }
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3.8rem 5.4rem 4.6rem 5.4rem;
+  background: linear-gradient(hsl(252, 100%, 67%) 0%, hsl(252, 100%, 67%) 0%, hsl(241, 81%, 54%) 100%);
+  border-radius: 3.2rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .result {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 2.4rem 5.8rem 4rem 5.8rem;
+  }
+}
+.result__title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: hsl(241, 100%, 89%);
+  margin-bottom: 3.5rem;
+}
+.result__score-container {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(hsl(256, 72%, 46%) 0%, hsla(241, 72%, 46%, 0) 100%, hsla(241, 72%, 46%, 0) 100%);
+  margin-bottom: 2.8rem;
+}
+.result__score {
+  font-size: 7.2rem;
+  line-height: 7.2rem;
+  color: hsl(0, 0%, 100%);
+  font-weight: 800;
+}
+.result__out-of {
+  color: hsl(241, 100%, 89%);
+  font-weight: bold;
+}
+.result__detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+}
+.result__detail-title {
+  font-size: 3.2rem;
+  color: hsl(0, 0%, 100%);
+  font-weight: bold;
+}
+.result__detail-text {
+  color: hsl(241, 100%, 89%);
+  font-weight: 300;
+  text-align: center;
+}
+
+.summary {
+  padding: 3.8rem 4rem 4.6rem 4rem;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+@media only screen and (max-width: 37.5em) {
+  .summary {
+    padding: 2.4rem 3rem 3rem 3rem;
+  }
+}
+.summary__title {
+  color: hsl(224, 30%, 27%);
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 2.8rem;
+}
+.summary__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  list-style: none;
+  margin-bottom: 4.1rem;
+}
+.summary__list-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.8rem 1.6rem;
+  border-radius: 1.2rem;
+}
+.summary__list-item--reaction {
+  color: hsl(0, 100%, 67%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), hsl(0, 100%, 67%);
+}
+.summary__list-item--memory {
+  color: hsl(39, 100%, 56%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), hsl(39, 100%, 56%);
+}
+.summary__list-item--verbal {
+  color: hsl(166, 100%, 37%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), hsl(166, 100%, 37%);
+}
+.summary__list-item--visual {
+  color: hsl(234, 85%, 45%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), hsl(234, 85%, 45%);
+}
+.summary__type {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  align-items: center;
+}
+.summary__icon {
+  width: 2rem;
+  height: 2rem;
+}
+.summary__score {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: hsl(224, 30%, 27%);
+}
+.summary__score span {
+  opacity: 50%;
+}
+
+.btn, .btn:link, .btn:visited {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  padding: 1.7rem;
+  transition: all 0.2s;
+  border-radius: 100px;
+  z-index: 1;
+  overflow: hidden;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+.btn:hover::before {
+  opacity: 1;
+}
+.btn--blue {
+  background: hsl(224, 30%, 27%);
+}
+.btn--blue::before {
+  background: linear-gradient(hsl(252, 100%, 67%) 0%, hsl(252, 100%, 67%) 0%, hsl(241, 81%, 54%) 100%);
+}
+
+/*# sourceMappingURL=style.css.map */

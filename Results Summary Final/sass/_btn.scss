@@ -1,0 +1,42 @@
+.btn {
+	&,
+	&:link,
+	&:visited {
+		position: relative;
+		display: inline-block;
+		text-decoration: none;
+		font-weight: 600;
+		color: #fff;
+		text-align: center;
+		padding: 1.7rem;
+		transition: all 0.2s;
+		border-radius: 100px;
+		z-index: 1;
+		overflow: hidden;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-color: red;
+		top: 0;
+		right: 0;
+		z-index: -1;
+		opacity: 0;
+		transition: opacity 0.5s ease-in;
+	}
+
+	&:hover::before {
+		opacity: 1;
+	}
+
+	&--blue {
+		background: $neutral-dark-gray-blue;
+
+		&::before {
+			background: $results-background-gradient;
+		}
+	}
+}

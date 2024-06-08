@@ -1,0 +1,16 @@
+.card {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(36.8rem, min-content));
+	justify-content: center;
+
+	background-color: $neutral-white;
+	box-shadow: 0px 3rem 6rem $color-box-shadow;
+	border-radius: 3.2rem;
+	flex: 0 1 73.6rem;
+
+	@media only screen and (max-width: $bp-medium) {
+		display: inline-block;
+		align-self: stretch;
+		border-radius: 0;
+	}
+}
