@@ -1,0 +1,43 @@
+$primary-main-background: rgb(9, 11, 27);
+$primary-card-background: rgb(27, 25, 56);
+$primary-accent-color: rgb(170, 92, 219);
+
+$neutral-white: hsl(0, 0%, 100%);
+$neutral-transparent-white: hsla(0, 0%, 100%, 0.75);
+$neutral-more-transparent-white: rgba(255, 255, 255, 0.75);
+
+@mixin font-inter {
+	font-family: 'Inter', sans-serif;
+}
+
+@mixin font-lexend-deca {
+	// font-family: 'Lexend Deca', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	@include font-inter;
+	font-weight: 500;
+	font-size: 1.5rem;
+}
+
+.main {
+	background-color: $primary-main-background;
+	width: 100%;
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

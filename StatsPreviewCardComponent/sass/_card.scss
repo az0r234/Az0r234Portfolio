@@ -1,0 +1,81 @@
+.card {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(32.5rem, 50%));
+	background-color: $primary-card-background;
+	overflow: hidden;
+	border-radius: 10px;
+	color: $neutral-white;
+
+	&__content-wrapper {
+		display: flex;
+		flex-direction: column;
+		padding: 7rem;
+		width: 100%;
+	}
+
+	&__heading {
+		font-size: 3.5rem;
+		margin-bottom: 3rem;
+
+		span {
+			color: $primary-accent-color;
+		}
+	}
+
+	&__description {
+		margin-bottom: 8rem;
+		color: $neutral-transparent-white;
+		font-weight: 300;
+		line-height: 1.75;
+	}
+
+	&__stats-list {
+		display: flex;
+		gap: 5rem;
+		list-style: none;
+	}
+
+	&__stats-item {
+		display: flex;
+		flex-direction: column;
+		gap: 1.2rem;
+	}
+
+	&__stats-value {
+		font-size: 2.5rem;
+	}
+
+	&__stats-type {
+		@include font-lexend-deca;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-weight: 300;
+		font-size: 1.2rem;
+		color: $neutral-more-transparent-white;
+	}
+
+	&__image-wrapper {
+		position: relative;
+		overflow: hidden;
+
+		&::after {
+			position: absolute;
+			content: '';
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			z-index: 999999;
+			background-color: $primary-accent-color;
+			mix-blend-mode: multiply;
+		}
+	}
+
+	&__image {
+		z-index: -1;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		display: block;
+	}
+}
