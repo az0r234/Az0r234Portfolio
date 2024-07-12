@@ -1,16 +1,24 @@
 .card {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(32.5rem, 50%));
+	grid-template-columns: repeat(auto-fit, minmax(37.5rem, 1fr));
 	background-color: $primary-card-background;
 	overflow: hidden;
 	border-radius: 10px;
 	color: $neutral-white;
 
+	margin: 0 2rem;
+
 	&__content-wrapper {
 		display: flex;
 		flex-direction: column;
 		padding: 7rem;
-		width: 100%;
+
+		@media (max-width: 39.4375em) {
+			align-items: center;
+			text-align: center;
+			padding: 2rem;
+			justify-content: center;
+		}
 	}
 
 	&__heading {
@@ -20,6 +28,11 @@
 		span {
 			color: $primary-accent-color;
 		}
+
+		@media (max-width: 39.4375em) {
+			margin-bottom: 2rem;
+			font-size: 3rem;
+		}
 	}
 
 	&__description {
@@ -27,12 +40,23 @@
 		color: $neutral-transparent-white;
 		font-weight: 300;
 		line-height: 1.75;
+
+		@media (max-width: 39.4375em) {
+			margin-bottom: 4rem;
+			width: 75%;
+		}
 	}
 
 	&__stats-list {
 		display: flex;
-		gap: 5rem;
+
 		list-style: none;
+		justify-content: space-between;
+
+		@media (max-width: 39.4375em) {
+			flex-direction: column;
+			gap: 3rem;
+		}
 	}
 
 	&__stats-item {
@@ -68,6 +92,10 @@
 			z-index: 999999;
 			background-color: $primary-accent-color;
 			mix-blend-mode: multiply;
+		}
+
+		@media (max-width: 39.4375em) {
+			grid-row: 1/1;
 		}
 	}
 

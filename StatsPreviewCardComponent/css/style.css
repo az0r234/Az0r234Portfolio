@@ -9,17 +9,31 @@
 html {
   font-size: 62.5%;
 }
+@media (max-width: 65em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 35.5em) {
+  html {
+    font-size: 45%;
+  }
+}
+@media (max-width: 18.75em) {
+  html {
+    font-size: 30%;
+  }
+}
 
 body {
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
+  background-color: rgb(9, 11, 27);
 }
 
 .main {
-  background-color: rgb(9, 11, 27);
-  width: 100%;
-  height: 100vh;
+  margin: 20vh 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,17 +41,25 @@ body {
 
 .card {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(32.5rem, 50%));
+  grid-template-columns: repeat(auto-fit, minmax(37.5rem, 1fr));
   background-color: rgb(27, 25, 56);
   overflow: hidden;
   border-radius: 10px;
   color: hsl(0, 0%, 100%);
+  margin: 0 2rem;
 }
 .card__content-wrapper {
   display: flex;
   flex-direction: column;
   padding: 7rem;
-  width: 100%;
+}
+@media (max-width: 39.4375em) {
+  .card__content-wrapper {
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    justify-content: center;
+  }
 }
 .card__heading {
   font-size: 3.5rem;
@@ -46,16 +68,34 @@ body {
 .card__heading span {
   color: rgb(170, 92, 219);
 }
+@media (max-width: 39.4375em) {
+  .card__heading {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+  }
+}
 .card__description {
   margin-bottom: 8rem;
   color: hsla(0, 0%, 100%, 0.75);
   font-weight: 300;
   line-height: 1.75;
 }
+@media (max-width: 39.4375em) {
+  .card__description {
+    margin-bottom: 4rem;
+    width: 75%;
+  }
+}
 .card__stats-list {
   display: flex;
-  gap: 5rem;
   list-style: none;
+  justify-content: space-between;
+}
+@media (max-width: 39.4375em) {
+  .card__stats-list {
+    flex-direction: column;
+    gap: 3rem;
+  }
 }
 .card__stats-item {
   display: flex;
@@ -86,6 +126,11 @@ body {
   z-index: 999999;
   background-color: rgb(170, 92, 219);
   mix-blend-mode: multiply;
+}
+@media (max-width: 39.4375em) {
+  .card__image-wrapper {
+    grid-row: 1/1;
+  }
 }
 .card__image {
   z-index: -1;

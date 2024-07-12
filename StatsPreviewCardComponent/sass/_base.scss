@@ -24,18 +24,29 @@ $neutral-more-transparent-white: rgba(255, 255, 255, 0.75);
 
 html {
 	font-size: 62.5%;
+
+	@media (max-width: 65em) {
+		font-size: 50%;
+	}
+
+	@media (max-width: 35.5em) {
+		font-size: 45%;
+	}
+
+	@media (max-width: 18.75em) {
+		font-size: 30%;
+	}
 }
 
 body {
 	@include font-inter;
 	font-weight: 500;
 	font-size: 1.5rem;
+	background-color: $primary-main-background;
 }
 
 .main {
-	background-color: $primary-main-background;
-	width: 100%;
-	height: 100vh;
+	margin: 20vh 0;
 
 	display: flex;
 	justify-content: center;
