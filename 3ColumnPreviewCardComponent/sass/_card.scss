@@ -1,0 +1,73 @@
+.card {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.card-list {
+	display: flex;
+	list-style: none;
+	border-radius: 10px;
+	overflow: hidden;
+
+	@media (max-width: 42em) {
+		flex-direction: column;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: 3.3rem;
+		padding: 5rem 3.6rem;
+		flex: 1 0;
+		background-color: currentColor;
+	}
+
+	&__item-icon {
+		width: 5.6rem;
+	}
+
+	&__item-heading {
+		font-size: 3rem;
+		color: $very-light-gray;
+		@include font-big-shoulder-display();
+	}
+
+	&__item-description {
+		color: $transparent-white;
+		margin-bottom: calc(8rem - 3.3rem);
+		max-width: 20rem;
+	}
+
+	&__item-learn-more,
+	&__item-learn-more:link,
+	&__item-learn-more:visited {
+		background-color: $very-light-gray;
+		text-decoration: none;
+		color: currentColor;
+		padding: 1.6rem 3rem;
+		border-radius: 1000px;
+		align-self: flex-start;
+		transition: all 0.3s;
+	}
+
+	&__item-learn-more:hover,
+	&__item-learn-more:active {
+		color: $very-light-gray;
+		background-color: transparent;
+		box-shadow: inset 0px 0px 0px 3px $very-light-gray;
+	}
+}
+
+.sedan {
+	color: $bright-orange;
+}
+
+.suvs {
+	color: $dark-cyan;
+}
+
+.luxury {
+	color: $very-dark-cyan;
+}
